@@ -20,7 +20,7 @@ btn.addEventListener("click", (e)=>{
         p[0].innerHTML = g
         alert("Correct")
     } else {
-       alert("Oops"+valued+d) 
+       alert("Oops the correct answer is "+d) 
        console.log(valued);
     }
 })
