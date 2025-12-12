@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess My Number</title>
+    <!-- Removed heavy Font Awesome file to improve load; uncomment if needed -->
+    <!-- <link rel="stylesheet" href="./all.css"> -->
+    <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+
+    <section class="all">
+        <h2>Guess My Number</h2>
+        <div class="scoreboard">
+            <div>Range: <span id="range">1 - 100</span></div>
+            <div>Attempts left: <span id="attempts">10</span></div>
+            <div>Best (fewest attempts): <span id="best">—</span></div>
+        </div>
+        <p id="message">I'm thinking of a number between <strong id="minVal">1</strong> and <strong id="maxVal">100</strong>. Can you guess it?</p>
+        <form id="guessForm">
+            <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100" required>
+            <div class="controls">
+                <button id="guessBtn" type="submit">Guess</button>
+                <button id="restartBtn" type="button">New Game</button>
+            </div>
+        </form>
+    </section>
+    <div class="image">
+        <img src="" alt=""><p></p>
+        <img src="" alt=""><p></p>
+    </div>
+    <a href="#">Start Over</a>
+    <script src="Game.js" defer></script>
+    <!-- <div class="a">
+        <div class="b fa-blink"></div>
+        <div class="b fa-blink"></div>
+    </div> -->
+</body>
+</html>

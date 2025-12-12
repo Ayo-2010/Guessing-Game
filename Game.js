@@ -60,7 +60,7 @@ form.addEventListener('submit', (e) => {
         updateBest(attemptsUsed)
         guessBtn.disabled = true
     } else if (attemptsLeft <= 0) {
-        messageEl.textContent = `Game over — the number was ${secret}.` 
+        messageEl.textContent = `Game over — the number was ${secret}.`
         guessBtn.disabled = true
     } else {
         const hint = guess < secret ? 'higher' : 'lower'
