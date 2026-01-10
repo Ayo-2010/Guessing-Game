@@ -4,38 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess My Number</title>
-    <!-- Removed heavy Font Awesome file to improve load; uncomment if needed -->
-    <!-- <link rel="stylesheet" href="./all.css"> -->
-    <link rel="stylesheet" href="style.min.css">
+    <meta name="description" content="A modern and interactive number guessing game with beautiful UI design">
+    <meta name="theme-color" content="#6366f1">
+    <title>Guess My Number - Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <section class="all">
-        <h2>Guess My Number</h2>
-        <div class="scoreboard">
-            <div>Range: <span id="range">1 - 100</span></div>
-            <div>Attempts left: <span id="attempts">10</span></div>
-            <div>Best (fewest attempts): <span id="best">—</span></div>
-        </div>
-        <p id="message">I'm thinking of a number between <strong id="minVal">1</strong> and <strong id="maxVal">100</strong>. Can you guess it?</p>
-        <form id="guessForm">
-            <input type="number" id="guessInput" placeholder="Enter your guess" min="1" max="100" required>
-            <div class="controls">
-                <button id="guessBtn" type="submit">Guess</button>
-                <button id="restartBtn" type="button">New Game</button>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">🎮 Guess My Number</h1>
+                <p class="subtitle">Challenge yourself to find the secret number</p>
             </div>
-        </form>
-    </section>
-    <div class="image">
-        <img src="" alt=""><p></p>
-        <img src="" alt=""><p></p>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-label">Range</span>
+                    <span class="stat-value" id="range">1 - 100</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Attempts</span>
+                    <span class="stat-value" id="attempts">10</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Best Score</span>
+                    <span class="stat-value" id="best">—</span>
+                </div>
+            </div>
+
+            <div class="message-box" id="message">
+                I'm thinking of a number between <strong id="minVal">1</strong> and <strong id="maxVal">100</strong>. Can you guess it?
+            </div>
+
+            <form id="guessForm">
+                <div class="input-group">
+                    <input 
+                        type="number" 
+                        id="guessInput" 
+                        placeholder="Enter your guess..." 
+                        min="1" 
+                        max="100" 
+                        required
+                        autocomplete="off"
+                        aria-label="Your guess"
+                    >
+                    <button id="guessBtn" type="submit" class="btn btn-primary" aria-label="Submit your guess">
+                        <span>Guess</span>
+                    </button>
+                </div>
+            </form>
+
+            <div class="button-group">
+                <button id="restartBtn" type="button" class="btn btn-secondary" aria-label="Start a new game">
+                    🔄 New Game
+                </button>
+            </div>
+
+            <div class="footer">
+                <p class="hint">💡 Tip: The hints will guide you towards the correct number!</p>
+            </div>
+        </div>
     </div>
-    <a href="#">Start Over</a>
+
     <script src="Game.js" defer></script>
-    <!-- <div class="a">
-        <div class="b fa-blink"></div>
-        <div class="b fa-blink"></div>
-    </div> -->
 </body>
 </html>
