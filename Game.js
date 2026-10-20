@@ -476,10 +476,10 @@ function handleGuess(event) {
     }
 
     if (guess < state.secret) {
-        setFeedback('low', `${pad(guess)} is too low. Guess higher — the target sits above it. Band narrowed to ${pad(state.low)}—${pad(state.high)}.`)
+        setFeedback('low', `${pad(guess)} is too low. Guess higher — the target sits above it. Band is now ${pad(state.low)}—${pad(state.high)}.`)
         playLowSound()
     } else {
-        setFeedback('high', `${pad(guess)} is too high. Guess lower — the target sits below it. Band narrowed to ${pad(state.low)}—${pad(state.high)}.`)
+        setFeedback('high', `${pad(guess)} is too high. Guess lower — the target sits below it. Band is now ${pad(state.low)}—${pad(state.high)}.`)
         playHighSound()
     }
 
